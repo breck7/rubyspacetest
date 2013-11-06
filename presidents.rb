@@ -1,8 +1,8 @@
 require 'space_object'
 file = File.open("presidents.space", "r")
 contents = file.read
-presidents = SpaceObject::Parser.new(contents)
+president = SpaceObject.parse(contents)
 
-simple = SpaceObject.parse('hello world')
-puts simple['hello']
+puts 'The first president was'
+puts president['0']['President']
 
